@@ -1,20 +1,18 @@
 import React from 'react';
 
-export class Header extends React.Component {
-    render() {
-        return(
-            <nav className="navbar navbar-default">
-                <div className="conteiner">
-                    <div className="navbar-header">
-                        <ul className="nav navbar-nav">
-                            <li><a href="#">{this.props.homeLinkName}</a></li>
-                        </ul>
-                    </div>
+export const Header = (props)=> {
+    return(
+        <nav className="navbar navbar-default">
+            <div className="conteiner">
+                <div className="navbar-header">
+                    <ul className="nav navbar-nav">
+                        <li><a href="#">{props.homeLinkName}</a></li>
+                    </ul>
                 </div>
-            </nav>
-        )
-    }
-}
+            </div>
+        </nav>
+    );
+};
 
 Header.propTypes = {
     homeLinkName: React.PropTypes.string
